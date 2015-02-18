@@ -1,5 +1,2 @@
-0.6
- - ct$src() now alays assumes UTF-8 data, even on Windows.
-
-0.5
- - Add support for Typed Arrays
+0.1
+ - Initial release
