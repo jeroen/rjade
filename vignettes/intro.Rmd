@@ -1,0 +1,63 @@
+---
+title: "Jade: A clean, whitespace-sensitive template language for writing HTML"
+author: "Jeroen Ooms"
+date: "`r Sys.Date()`"
+output:
+  knitr:::html_vignette:
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Introduction to Jade Templating in R}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(comment = "")
+library(rjade)
+```
+
+[Jade](http://jade-lang.com/) is a high performance template engine heavily influenced by Haml. The `rjade` package iterfaces to the [JavaScript library](https://www.npmjs.com/package/jade) using V8, the embedded JavaScript engine for R. Below an example of a Jade template, taken from the [jade homepage](http://jade-lang.com/). This example template includes one variable called `youAreUsingJade`.  
+
+```jade
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    script(type='text/javascript').
+      if (foo) {
+         bar(1 + 5)
+      }
+  body
+    h1 Jade - node template engine
+    #container.col
+      if youAreUsingJade
+        p You are amazing
+      else
+        p Get on it!
+      p.
+        Jade is a terse and simple
+        templating language with a
+        strong focus on performance
+        and powerful features.
+```
+
+Converting a template to HTML text involves two steps. The first step compiles the template with some formatting options into a closure. The binding for this is implemented in `jade_compile`.
+
+```{r}
+# Compile a Jade template in R
+text <- readLines(system.file("examples/test.jade", package = "rjade"))
+tpl <- jade_compile(text, pretty = TRUE)
+```
+
+The second step calls the closure with optionally some local variables to render the output to HTML.
+
+```{r}
+# Render the template
+tpl()
+```
+
+Note how the HTML output changes when setting local variables:
+
+```{r}
+tpl(youAreUsingJade = TRUE)
+```
