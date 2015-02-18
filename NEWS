@@ -1,2 +1,3 @@
 0.1
- - Initial release
+ - Workaround for UTF-8 on Windows.
+ - Initial release.
