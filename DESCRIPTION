@@ -1,6 +1,6 @@
 Package: rjade
 Type: Package
-Title: A Clean, Whitespace-sensitive Template Language for Writing HTML
+Title: A Clean, Whitespace-Sensitive Template Language for Writing HTML
 Version: 0.1
 Date: 2015-02-17
 Author: Jeroen Ooms, Forbes Lindesay
