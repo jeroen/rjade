@@ -69,7 +69,7 @@ new_jade <- function(){
   # Create context
   myct <- new_context();
 
-  # Temporary disabled due to UTF8 problems in windows
+  # Temporary disabled due to UTF8 problems in windows. Fixed in V8 0.6
   # ct$source(system.file("js/jade.min.js", package = pkgname))
 
   src <- readLines(system.file("js/jade.min.js", package = "rjade"), encoding = "UTF-8", warn = FALSE)
