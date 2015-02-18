@@ -31,9 +31,7 @@
 jade_compile <- function(text, ...){
   text <- paste(text, collapse = "\n")
   opts <- list(...)
-  ct <- new_context()
-  ct$source(system.file("js/jade.min.js", package = "rjade"))
-  ct$source(system.file("js/bindings.js", package = "rjade"))
+  ct <- new_jade()
   ct$call("jade_compile", text, opts)
   fn <- function(...){
     locals <- list(...)
@@ -63,4 +61,19 @@ print.jade <- function(x, ...){
 #' @export
 print.jade_html <- function(x, ...){
   cat(x, "\n")
+}
+
+# Create new context with Jade
+new_jade <- function(){
+
+  # Create context
+  myct <- new_context();
+
+  # Temporary disabled due to UTF8 problems in windows
+  # ct$source(system.file("js/jade.min.js", package = pkgname))
+
+  src <- readLines(system.file("js/jade.min.js", package = "rjade"), encoding = "UTF-8", warn = FALSE)
+  myct$eval(src)
+  myct$source(system.file("js/bindings.js", package = "rjade"))
+  return(myct)
 }
