@@ -2,7 +2,6 @@ Package: rjade
 Type: Package
 Title: A Clean, Whitespace-Sensitive Template Language for Writing HTML
 Version: 0.1
-Date: 2015-02-17
 Author: Jeroen Ooms, Forbes Lindesay
 Maintainer: Jeroen Ooms <jeroen.ooms@stat.ucla.edu>
 Description: Jade is a high performance template engine heavily influenced by
