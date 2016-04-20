@@ -12,4 +12,5 @@ BugReports: https://github.com/jeroenooms/rjade/issues
 VignetteBuilder: knitr
 Imports: V8 (>= 0.5)
 Suggests:
-    knitr
+    knitr,
+    rmarkdown
