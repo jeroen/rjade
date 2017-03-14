@@ -3,12 +3,12 @@ Type: Package
 Title: A Clean, Whitespace-Sensitive Template Language for Writing HTML
 Version: 0.1
 Author: Jeroen Ooms, Forbes Lindesay
-Maintainer: Jeroen Ooms <jeroen.ooms@stat.ucla.edu>
+Maintainer: Jeroen Ooms <jeroen@berkeley.edu>
 Description: Jade is a high performance template engine heavily influenced by
     Haml and implemented with JavaScript for node and browsers.
 License: MIT + file LICENSE
-URL: https://github.com/jeroenooms/rjade https://www.npmjs.com/package/jade
-BugReports: https://github.com/jeroenooms/rjade/issues
+URL: https://github.com/jeroen/rjade https://www.npmjs.com/package/jade
+BugReports: https://github.com/jeroen/rjade/issues
 VignetteBuilder: knitr
 Imports: V8 (>= 0.5)
 Suggests:
