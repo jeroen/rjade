@@ -4,3 +4,4 @@
 rjade.Rproj
 .V8history
 ^appveyor\.yml$
+^README.md$

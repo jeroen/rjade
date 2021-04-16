@@ -13,11 +13,11 @@
 #' @export
 #' @rdname jade
 #' @aliases jade
-#' @references Jade documentation: \url{http://jade-lang.com}
+#' @references Jade documentation: \url{https://jade-lang.com}
 #' @param text string with jade template.
-#' @param ... options passed to the compiler, see \url{http://jade-lang.com/api}.
+#' @param ... options passed to the compiler, see \url{https://jade-lang.com/api}.
 #' @param locals local variables used in the template.
-#' @examples # Example from http://jade-lang.com
+#' @examples # Example from https://jade-lang.com
 #' text <- readLines(system.file("examples/test.jade", package = "rjade"))
 #'
 #' # Compile and render seperately
