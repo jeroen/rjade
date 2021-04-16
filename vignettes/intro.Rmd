@@ -16,7 +16,7 @@ knitr::opts_chunk$set(comment = "")
 library(rjade)
 ```
 
-[Jade](https://jade-lang.com/) is a high performance template engine heavily influenced by Haml. The `rjade` package interfaces to the [JavaScript library](https://www.npmjs.com/package/jade) using V8, the embedded JavaScript engine for R. Below an example of a Jade template, taken from the [jade homepage](http://jade-lang.com/). This example template includes one variable called `youAreUsingJade`.  
+[Jade](https://jade-lang.com/) is a high performance template engine heavily influenced by Haml. The `rjade` package interfaces to the [JavaScript library](https://www.npmjs.com/package/jade) using V8, the embedded JavaScript engine for R. Below an example of a Jade template, taken from the [jade homepage](https://jade-lang.com/). This example template includes one variable called `youAreUsingJade`.  
 
 ```jade
 doctype html
