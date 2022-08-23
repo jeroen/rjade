@@ -16,3 +16,4 @@ Suggests:
     rmarkdown
 RoxygenNote: 7.1.1
 Encoding: UTF-8
+Config/runiverse/noindex: true
